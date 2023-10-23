@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Кубышка займы</string>
+    <string name="users">Пользовательское</string>
+    <string name="agreement"> соглашение</string>
+    <string name="accept">Принять</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="SecondName">Фамилия</string>
+    <string name="Name">Имя</string>
+    <string name="FatherName">Отчество</string>
+    <string name="Phone">Телефон</string>
+    <string name="Email">E-mail</string>
+    <string name="agree">Я даю свое согласие на обработку персональных данных</string>
+    <string name="credit">Кредиты</string>
+    <string name="sum">Сумма:</string>
+    <string name="interest_rate">Ставка:</string>
+    <string name="term">Срок:</string>
+    <string name="arrange">Оформить</string>
+    <string name="details">Детали</string>
+    <string name="loans">Займы</string>
+    <string name="cards">Карты</string>
+    <string name="credits">Кредиты</string>
+    <string name="cred">Кредитные</string>
+    <string name="debit">Дебетовые</string>
+    <string name="instalment">Рассрочки</string>
+    <string name="error">Error</string>
+    <string name="wrongMailFormat">Неверный формат почты (Wrong e-mail format)</string>
+    <string name="wrongPhoneFormat">Неверный формат телефонного номера (Error in telephone number format)</string>
+    <string name="isCyrillic">Используйте кириллицу для ввода имени (Use only cyrillic symbols to enter your name)</string>
+    <string name="poleIsNull">Заполните все поля</string>
+    <string name="invalidConnection">Проверьте подключение к интернету</string>
+</resources>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.internetDisable.TimerFragment"
+        android:label="fragment_timer"
+        tools:layout="@layout/fragment_timer" >
+        <action
+            android:id="@+id/action_timerFragment_to_errorFragment"
+            app:destination="@id/errorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/errorFragment"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.internetDisable.ErrorFragment"
+        android:label="fragment_error"
+        tools:layout="@layout/fragment_error" >
+        <action
+            android:id="@+id/action_errorFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.internetDisable.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.internetDisable.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userAgreement"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.UserAgreement"
+        android:label="fragment_user_agreement"
+        tools:layout="@layout/fragment_user_agreement" >
+        <action
+            android:id="@+id/action_userAgreement_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loans"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.internetAvaliable.loans.LoansFragment"
+        android:label="fragment_loans"
+        tools:layout="@layout/fragment_loans" >
+        <action
+            android:id="@+id/action_loans_to_cards"
+            app:destination="@id/cards" />
+        <action
+            android:id="@+id/action_loans_to_credit"
+            app:destination="@id/credit" />
+        <action
+            android:id="@+id/action_loans_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_loans_to_loanMoreDetailsFragment"
+            app:destination="@id/loanMoreDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cards"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.internetAvaliable.cards.CardsFragment"
+        android:label="fragment_cards"
+        tools:layout="@layout/fragment_cards" >
+        <action
+            android:id="@+id/action_cards_to_credit"
+            app:destination="@id/credit" />
+        <action
+            android:id="@+id/action_cards_to_loans"
+            app:destination="@id/loans" />
+        <action
+            android:id="@+id/action_cards_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_cards_to_anyCardMoreDetailsFragment"
+            app:destination="@id/anyCardMoreDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/credit"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.internetAvaliable.credit.CreditFragment"
+        android:label="fragment_credit"
+        tools:layout="@layout/fragment_credit" >
+        <action
+            android:id="@+id/action_credit_to_cards"
+            app:destination="@id/cards" />
+        <action
+            android:id="@+id/action_credit_to_loans"
+            app:destination="@id/loans" />
+        <action
+            android:id="@+id/action_credit_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_credit_to_creditMoreDetailsFragment"
+            app:destination="@id/creditMoreDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_userAgreement"
+            app:destination="@id/userAgreement" />
+        <action
+            android:id="@+id/action_splashFragment_to_loans"
+            app:destination="@id/loans" />
+        <action
+            android:id="@+id/action_splashFragment_to_credit"
+            app:destination="@id/credit" />
+        <action
+            android:id="@+id/action_splashFragment_to_cards"
+            app:destination="@id/cards" />
+        <action
+            android:id="@+id/action_splashFragment_to_invalidConnection"
+            app:destination="@id/invalidConnection" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.internetAvaliable.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_webViewFragment_self"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anyCardMoreDetailsFragment"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.internetAvaliable.cards.AnyCardMoreDetailsFragment"
+        android:label="fragment_anycard_more_details"
+        tools:layout="@layout/fragment_anycard_more_details" >
+        <argument
+            android:name="AnyCard"
+            app:argType="com.creativeminds.imaginationworld.fantasticodyssey.data.AnyCard" />
+        <action
+            android:id="@+id/action_anyCardMoreDetailsFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditMoreDetailsFragment"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.internetAvaliable.credit.CreditMoreDetailsFragment"
+        android:label="CreditMoreDetailsFragment" >
+        <action
+            android:id="@+id/action_creditMoreDetailsFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <argument
+            android:name="Credit"
+            app:argType="com.creativeminds.imaginationworld.fantasticodyssey.data.Credit" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanMoreDetailsFragment"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.internetAvaliable.loans.LoanMoreDetailsFragment"
+        android:label="fragment_loan_more_details"
+        tools:layout="@layout/fragment_loan_more_details" >
+        <action
+            android:id="@+id/action_loanMoreDetailsFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <argument
+            android:name="Loan"
+            app:argType="com.creativeminds.imaginationworld.fantasticodyssey.data.Loan" />
+    </fragment>
+    <fragment
+        android:id="@+id/invalidConnection"
+        android:name="com.creativeminds.imaginationworld.fantasticodyssey.view.internetDisable.InvalidConnection"
+        android:label="fragment_invalid_connection"
+        tools:layout="@layout/fragment_invalid_connection" >
+        <action
+            android:id="@+id/action_invalidConnection_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+</navigation>
